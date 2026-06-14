@@ -31,7 +31,7 @@ The accurate classification of skin lesions, particularly melanoma, is vital for
 
 ## Method Overview
 <p align="center">
-  <img src="utils/model_gnn_cnn.jpg" width="650" alt="Context-Aware GNN Architecture Diagram"><br>
+  <img src="utils/model_gnn_cnn.jpg" width="800" alt="Context-Aware GNN Architecture Diagram"><br>
   <em>Figure: Overview of the Context-Aware Graph Neural Network pipeline for lesion classification.</em>
 </p>
 
@@ -49,3 +49,66 @@ This framework leverages **PyTorch** and **PyTorch Geometric (PyG)** to run opti
 ```bash
 conda create -n context-gnn python=3.10 -y
 conda activate context-gnn
+```
+
+---
+
+## Datasets
+**Multi-Source Benchmark Evaluation:** The proposed framework was extensively validated across four public dermatological image repositories (ISIC 2024, HAM10000, PAD-UFES-20, and HIBA) capturing variations across both clinical smartphone captures and high-resolution dermoscopic 3D total-body scans.
+**Extreme Class Imbalances:** The target evaluation matrix tests structural robustness against severe class skewness, handling configurations ranging from the nearly balanced HIBA dataset down to the highly imbalanced PAD-UFES-20 ($2.3\%$ malignant) and ISIC 2024 ($0.1\%$ malignant) streams.
+**Patient Metadata Integration:** Beyond raw pixel arrays tracking over images, the testbeds include rich contextual vectors linking specific lesion-level morphological markings directly with patient-level demographic attributes.
+
+---
+
+### Performance Comparison with State-of-the-Art (SOTA) Models
+
+The table below demonstrates the evaluation metrics (%) across four public skin lesion benchmarks. The proposed model consistently outperforms top-performing baseline frameworks.
+
+<div align="center">
+
+| Dataset | Model | Accuracy | Precision | Recall | F1-Score |
+| :--- | :--- | :---: | :---: | :---: | :---: |
+| **ISIC Archive** 
+| | Optimised CNN | 94.31% | — | — | — |
+| | Hybrid CNN | 94.41% | 94.00% | 95.00% | 94.00% |
+| | CNN-Attention Hybrid | 96.70% | 96.69% | 97.61% | 96.69% |
+| | **Proposed** | **98.96%** | **98.96%** | **98.95%** | **98.96%** |
+| <br> | | | | | |
+| **PAD-UFES-20** 
+| | Optimised CNN Model | 84.90% | — | — | — |
+| | Multi-modal Contrastive | 89.60% | — | — | 90.00% |
+| | CNN-Attention Hybrid | 91.02% | 91.35% | 91.05% | 91.19% |
+| | **Proposed** | **94.29%** | **94.40%** | **94.29%** | **94.26%** |
+| <br> | | | | | |
+| **HIBA** | Transformer-Based DNNs | 84.71% | — | — | — |
+| | CNN Model | 87.00% | 86.00% | 85.40% | 85.70% |
+| | Multi-modal Contrastive | 87.50% | — | — | 88.60% |
+| | **Proposed** | **89.19%** | **90.01%** | **89.19%** | **89.19%** |
+| <br> | | | | | |
+| **HAM10000** | Multi-modal Transformer | 81.60% | — | — | — |
+| | Multi-modal Neural Network | 85.20% | 85.20% | — | 85.20% |
+| | Multi-modal Contrastive | 85.90% | — | — | 61.80% |
+| | **Proposed** | **86.69%** | **87.32%** | **86.69%** | **86.64%** |
+
+</div>
+
+*(Note: Dashed entries "—" indicate metrics that were not reported in their respective original publications).*
+
+---
+
+## Acknowledgments
+
+This work was supported by UK Research and Innovation (UKRI) –Economic and Social Research Council (ESRC) under the SCAnDiproject (Grant: ES/Y010655/1) and the Research Investment Fund(RIF) from Edge Hill University (Grant: 1REWAB25).
+
+---
+
+## Citattion
+```bibtex
+@inproceedings{azeem2026context,
+  title={Context-Aware Graph Neural Network for Skin Lesion Classification: Context-Aware GNN for Skin Lesion Classification},
+  author={Azeem, Muhammad and Nazir, Saqib and Ahmed, Amr and Behera, Ardhendu},
+  booktitle={Proceedings of the 41st ACM/SIGAPP Symposium on Applied Computing},
+  pages={164--173},
+  year={2026},
+  doi=https://doi.org/10.1145/3748522.377995
+}
