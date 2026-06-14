@@ -54,9 +54,9 @@ conda activate context-gnn
 ---
 
 ## Datasets
-**Multi-Source Benchmark Evaluation:** The proposed framework was extensively validated across four public dermatological image repositories (ISIC 2024, HAM10000, PAD-UFES-20, and HIBA) capturing variations across both clinical smartphone captures and high-resolution dermoscopic 3D total-body scans.
-**Extreme Class Imbalances:** The target evaluation matrix tests structural robustness against severe class skewness, handling configurations ranging from the nearly balanced HIBA dataset down to the highly imbalanced PAD-UFES-20 ($2.3\%$ malignant) and ISIC 2024 ($0.1\%$ malignant) streams.
-**Patient Metadata Integration:** Beyond raw pixel arrays tracking over images, the testbeds include rich contextual vectors linking specific lesion-level morphological markings directly with patient-level demographic attributes.
+* **Multi-Source Benchmark Evaluation:** The proposed framework was extensively validated across four public dermatological image repositories (ISIC 2024, HAM10000, PAD-UFES-20, and HIBA) capturing variations across both clinical smartphone captures and high-resolution dermoscopic 3D total-body scans.
+* **Extreme Class Imbalances:** The target evaluation matrix tests structural robustness against severe class skewness, handling configurations ranging from the nearly balanced HIBA dataset down to the highly imbalanced PAD-UFES-20 ($2.3\%$ malignant) and ISIC 2024 ($0.1\%$ malignant) streams.
+* **Patient Metadata Integration:** Beyond raw pixel arrays tracking over images, the testbeds include rich contextual vectors linking specific lesion-level morphological markings directly with patient-level demographic attributes.
 
 ---
 
@@ -68,14 +68,12 @@ The table below demonstrates the evaluation metrics (%) across four public skin 
 
 | Dataset | Model | Accuracy | Precision | Recall | F1-Score |
 | :--- | :--- | :---: | :---: | :---: | :---: |
-| **ISIC Archive** 
-| | Optimised CNN | 94.31% | — | — | — |
+| **ISIC Archive** | Optimised CNN | 94.31% | — | — | — |
 | | Hybrid CNN | 94.41% | 94.00% | 95.00% | 94.00% |
 | | CNN-Attention Hybrid | 96.70% | 96.69% | 97.61% | 96.69% |
 | | **Proposed** | **98.96%** | **98.96%** | **98.95%** | **98.96%** |
 | <br> | | | | | |
-| **PAD-UFES-20** 
-| | Optimised CNN Model | 84.90% | — | — | — |
+| **PAD-UFES-20** | Optimised CNN Model | 84.90% | — | — | — |
 | | Multi-modal Contrastive | 89.60% | — | — | 90.00% |
 | | CNN-Attention Hybrid | 91.02% | 91.35% | 91.05% | 91.19% |
 | | **Proposed** | **94.29%** | **94.40%** | **94.29%** | **94.26%** |
@@ -103,6 +101,8 @@ This work was supported by UK Research and Innovation (UKRI) –Economic and Soc
 ---
 
 ## Citattion
+If you find our research useful in your work, please cite our paper:
+
 ```bibtex
 @inproceedings{azeem2026context,
   title={Context-Aware Graph Neural Network for Skin Lesion Classification: Context-Aware GNN for Skin Lesion Classification},
@@ -110,5 +110,5 @@ This work was supported by UK Research and Innovation (UKRI) –Economic and Soc
   booktitle={Proceedings of the 41st ACM/SIGAPP Symposium on Applied Computing},
   pages={164--173},
   year={2026},
-  doi=https://doi.org/10.1145/3748522.377995
+  doi={10.1145/3748522.377995}
 }
