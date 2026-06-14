@@ -50,6 +50,9 @@ This framework leverages **PyTorch** and **PyTorch Geometric (PyG)** to run opti
 conda create -n context-gnn python=3.10 -y
 conda activate context-gnn
 ```
+```
+pip install requirements.txt
+```
 
 ---
 
@@ -61,7 +64,6 @@ conda activate context-gnn
 ---
 
 ### Performance Comparison with State-of-the-Art (SOTA) Models
-
 The table below demonstrates the evaluation metrics (%) across four public skin lesion benchmarks. The proposed model consistently outperforms top-performing baseline frameworks.
 
 <div align="center">
@@ -95,12 +97,11 @@ The table below demonstrates the evaluation metrics (%) across four public skin 
 ---
 
 ## Acknowledgments
-
 This work was supported by UK Research and Innovation (UKRI) –Economic and Social Research Council (ESRC) under the SCAnDiproject (Grant: ES/Y010655/1) and the Research Investment Fund(RIF) from Edge Hill University (Grant: 1REWAB25).
 
 ---
 
-## Citattion
+## Citation
 If you find our research useful in your work, please cite our paper:
 
 ```bibtex
