@@ -63,7 +63,7 @@ pip install requirements.txt
 
 ---
 
-### Performance Comparison with State-of-the-Art (SOTA) Models
+## Performance Comparison with State-of-the-Art (SOTA) Models
 The table below demonstrates the evaluation metrics (%) across four public skin lesion benchmarks. The proposed model consistently outperforms top-performing baseline frameworks.
 
 <div align="center">
@@ -111,5 +111,5 @@ If you find our research useful in your work, please cite our paper:
   booktitle={Proceedings of the 41st ACM/SIGAPP Symposium on Applied Computing},
   pages={164--173},
   year={2026},
-  doi={10.1145/3748522.377995}
+  doi={10.1145/3748522.3779958}
 }
