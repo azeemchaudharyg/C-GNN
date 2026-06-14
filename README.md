@@ -3,7 +3,7 @@
 <p align="center">
   <a href="https://dl.acm.org/doi/proceedings/10.1145/3748522" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/ACM_SAC-2026-blue" alt="Conference"></a>
   <a href="https://doi.org/10.1145/3748522.3779958" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/DOI-10.1145/3748522.3779958-red" alt="DOI"></a>
-  <a href="https://github.com/azeemchaudharyg/ContextAware-GNN" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Framework-PyTorch_Geometric-purple" alt="Implementation"></a>
+  <a href="https://github.com/azeemchaudharyg/C-GNN/blob/main/notebooks/GNN_Multimodal.ipynb" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Framework-PyTorch_Geometric-purple" alt="Implementation"></a>
   <a href="LICENSE" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/License-MIT-green" alt="License"></a>
 </p>
 
