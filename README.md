@@ -29,17 +29,15 @@ The accurate classification of skin lesions, particularly melanoma, is vital for
 
 ---
 
-## Method Architecture
-
-The structural workflow of the Context-Aware GNN operates in three primary phases:
-1. **Regional Feature Embedding:** Extracting patch-level descriptors using a deep CNN backbone.
-2. **Graph Construction:** Mapping spatial regions as nodes and connecting structural boundaries using geometric distance thresholding.
-3. **Contextual Aggregation:** Executing message-passing operations across the constructed graph to generate context-aware predictions.
-
+## Method Overview
 <p align="center">
-  <img src="images/gnn_architecture.png" width="650" alt="Context-Aware GNN Architecture Diagram"><br>
+  <img src="utils/model_gnn_cnn.jpg" width="650" alt="Context-Aware GNN Architecture Diagram"><br>
   <em>Figure: Overview of the Context-Aware Graph Neural Network pipeline for lesion classification.</em>
 </p>
+
+1. **Graph Processing Pipeline:** The joint multimodal feature vector $F \in \mathbb{R}^D$ is partitioned into $N$ unique subspaces (e.g., $N=6$) representing nodes in a fully connected graph, which undergoes relation-aware feature aggregation and multi-hop message passing to map long-range dependencies.
+2. **Downstream Classification:** The updated, context-rich graph nodes are aggregated via global mean pooling to construct a singular, graph-level feature embedding that is passed directly to a classifier to yield the final diagnostic prediction (benign vs. malignant).
+3. **Ablation Framework:** To isolate multimodal performance impacts, an alternative late-fusion architecture variant is developed where metadata tracks are separately encoded through a Multi-Layer Perceptron (MLP) and merged with graph-processed image nodes right before the final classification head.
 
 ---
 
